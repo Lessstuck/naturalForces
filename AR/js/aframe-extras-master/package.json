@@ -28,6 +28,7 @@
     "aframe": "*"
   },
   "dependencies": {
+    "growl": "^1.10.5",
     "three-pathfinding": "^0.5.5"
   },
   "devDependencies": {
