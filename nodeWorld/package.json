@@ -1,0 +1,19 @@
+{
+  "name": "naturalforces",
+  "version": "1.0.0",
+  "description": "central glue for \"Natural Forces\" work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Les Stuck",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mosca": "^2.8.2",
+    "mqtt": "^2.18.1",
+    "node-osc": "^2.1.0",
+    "osc": "^2.2.3",
+    "socket.io": "^2.1.1"
+  }
+}

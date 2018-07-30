@@ -1,0 +1,5 @@
+sudo npm install mqtt -g
+npm install mosca pino -g
+
+then
+

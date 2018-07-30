@@ -1,0 +1,429 @@
+{
+    "accessors": [
+        {
+            "bufferView": 0,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 120,
+            "max": [
+                4.95833349227905
+            ],
+            "min": [
+                0.0
+            ],
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 1,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 9930,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 2,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2490,
+            "max": [
+                247.719924926758,
+                59.123291015625,
+                90.3339996337891
+            ],
+            "min": [
+                -193.999099731445,
+                -131.031402587891,
+                2.07599997520447
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 3,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2490,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 4,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 2490,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 5,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 28356,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 6,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6465,
+            "max": [
+                242.212005615234,
+                48.0150985717773,
+                78.2976989746094
+            ],
+            "min": [
+                -190.298706054688,
+                -119.843299865723,
+                5.31020021438599
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 7,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6465,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 8,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 6465,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 9,
+            "byteOffset": 0,
+            "componentType": 5123,
+            "count": 20316,
+            "type": "SCALAR"
+        },
+        {
+            "bufferView": 10,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 4293,
+            "max": [
+                247.58479309082,
+                50.1143989562988,
+                86.9560928344727
+            ],
+            "min": [
+                -184.593704223633,
+                -122.022521972656,
+                59.6780014038086
+            ],
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 11,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 4293,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 12,
+            "byteOffset": 0,
+            "componentType": 5126,
+            "count": 4293,
+            "type": "VEC2"
+        }
+    ],
+    "animations": [
+        {
+            "channels": [],
+            "name": "Take 001",
+            "samplers": []
+        }
+    ],
+    "asset": {
+        "generator": "FBX2glTF",
+        "version": "2.0"
+    },
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteLength": 480,
+            "byteOffset": 0
+        },
+        {
+            "buffer": 0,
+            "byteLength": 19860,
+            "byteOffset": 480,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 29880,
+            "byteOffset": 20340,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 29880,
+            "byteOffset": 50220,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 19920,
+            "byteOffset": 80100,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 56712,
+            "byteOffset": 100020,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 77580,
+            "byteOffset": 156732,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 77580,
+            "byteOffset": 234312,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 51720,
+            "byteOffset": 311892,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 40632,
+            "byteOffset": 363612,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteLength": 51516,
+            "byteOffset": 404244,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 51516,
+            "byteOffset": 455760,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteLength": 34344,
+            "byteOffset": 507276,
+            "target": 34962
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 541620,
+            "uri": "buffer.bin"
+        }
+    ],
+    "materials": [
+        {
+            "alphaMode": "OPAQUE",
+            "name": "Dinghy_Wooden_Boat_wood",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.5,
+                    0.5,
+                    0.5,
+                    0.0
+                ],
+                "metallicFactor": 0.100000001490116,
+                "roughnessFactor": 0.400000005960464
+            }
+        },
+        {
+            "alphaMode": "OPAQUE",
+            "emissiveFactor": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "name": "StingrayPBS1",
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    1.0,
+                    1.0,
+                    1.0,
+                    0.0
+                ],
+                "metallicFactor": 0.100000001490116,
+                "roughnessFactor": 0.400000005960464
+            }
+        }
+    ],
+    "meshes": [
+        {
+            "name": "broun_wood",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 3,
+                        "POSITION": 2,
+                        "TEXCOORD_0": 4
+                    },
+                    "indices": 1,
+                    "material": 0,
+                    "mode": 4
+                }
+            ]
+        },
+        {
+            "name": "white_wood",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 7,
+                        "POSITION": 6,
+                        "TEXCOORD_0": 8
+                    },
+                    "indices": 5,
+                    "material": 0,
+                    "mode": 4
+                }
+            ]
+        },
+        {
+            "name": "metall",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 11,
+                        "POSITION": 10,
+                        "TEXCOORD_0": 12
+                    },
+                    "indices": 9,
+                    "material": 1,
+                    "mode": 4
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "children": [
+                1
+            ],
+            "name": "RootNode",
+            "rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "children": [
+                2,
+                3,
+                4
+            ],
+            "name": "Dinghy_Wooden_Boat",
+            "rotation": [
+                -0.430459320545197,
+                0.560985505580902,
+                0.560985505580902,
+                0.430459320545197
+            ],
+            "scale": [
+                0.00999999977648258,
+                0.00999999977648258,
+                0.00999999977648258
+            ],
+            "translation": [
+                0.0456839762628078,
+                -0.0092732235789299,
+                0.263738662004471
+            ]
+        },
+        {
+            "mesh": 0,
+            "name": "broun_wood",
+            "rotation": [
+                -7.70371977754894e-33,
+                1.23259516440783e-32,
+                2.77555756156289e-17,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                2.98168182373047,
+                35.9540557861328,
+                -1.20499801635742
+            ]
+        },
+        {
+            "mesh": 1,
+            "name": "white_wood",
+            "rotation": [
+                -7.70371977754894e-33,
+                1.23259516440783e-32,
+                2.77555756156289e-17,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                2.98168182373047,
+                35.9540557861328,
+                -1.20499801635742
+            ]
+        },
+        {
+            "mesh": 2,
+            "name": "metall",
+            "rotation": [
+                -7.70371977754894e-33,
+                1.23259516440783e-32,
+                2.77555756156289e-17,
+                1.0
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                1.0
+            ],
+            "translation": [
+                2.98168182373047,
+                35.9540557861328,
+                -1.20499801635742
+            ]
+        }
+    ],
+    "samplers": [
+        {}
+    ],
+    "scene": 0,
+    "scenes": [
+        {
+            "name": "Root Scene",
+            "nodes": [
+                0
+            ]
+        }
+    ]
+}
