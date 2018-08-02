@@ -6,13 +6,16 @@
 
 <body style='margin : 0px; overflow: hidden;'>
   <a-scene embedded arjs="debugUIEnabled: false;">
+    <a-assets>
+        <a-asset-item id="boatfile" src="models/boat_out/boat.gltf)"></a-asset-item>
+    </a-assets>
     <a-marker-camera preset='kanji'>
     </a-marker-camera>
     <a-entity id="boat">
           <a-entity position="0 2.6 0"
                     scale=".002 .002 .002"
                     rotation="0 90 0"
-                    gltf-model="src: url(./models/boat_out/boat.gltf);"
+                    gltf-model-next="#boatfile" >
           </a-entity>
     </a-entity>
     <a-light type="point" color="yellow" position="-4 4 0" intensity="2"></a-light>
@@ -20,6 +23,7 @@
     <a-light type="point" color="skyblue" position="0 4 0" intensity="2"></a-light>
 
   </a-scene>
+
 
   <!-- other models -->
   <!-- scale=".25 .25 .25" -->
