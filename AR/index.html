@@ -10,10 +10,10 @@
     </a-marker-camera>
     <a-entity id="boat">
           <a-entity position="0 2.6 0"
-                    scale=".002 .002 .002"
+                    scale=".25 .25 .25"
                     rotation="0 90 0"
-                    obj-model="obj: url(./models/Dinghy_Wooden_Boat_obj/Dinghy_Wooden_Boat.obj);
-                                mtl: url(./models/Dinghy_Wooden_Boat_obj/Dinghy_Wooden_Boat.mtl)">
+                    gltf-model="src: url(./models/boat.glb);"
+                    animation-mixer="clip: *;"
           </a-entity>
     </a-entity>
     <a-light type="point" color="yellow" position="-4 4 0" intensity="2"></a-light>
@@ -26,6 +26,10 @@
   <!-- scale=".25 .25 .25" -->
   <!-- gltf-model="src: url(./models/Dinghy_Wooden_Boat.mtl);" -->
   <!-- animation-mixer="clip: *;"> -->
+  <!-- scale=".002 .002 .002" -->
+  <!-- rotation="0 90 0" -->
+  <!-- obj-model="obj: url(./models/Dinghy_Wooden_Boat_obj/Dinghy_Wooden_Boat.obj); -->
+      <!-- mtl: url(./models/Dinghy_Wooden_Boat_obj/Dinghy_Wooden_Boat.mtl)"> -->
   <script type="text/javascript">
     let boat;
 //    function onSceneLoaded() {
