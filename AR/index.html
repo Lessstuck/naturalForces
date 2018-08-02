@@ -34,23 +34,18 @@
   //      }
     const scene = document.querySelector('a-scene');
   //  scene.addEventListener('loaded', onSceneLoaded);
-
-      var tip = 0.;
-    //  var socket = io.connect('//53703f13.ngrok.io');
-    var socket = io.connect('//ae7cf58d.ngrok.io');
+    var tip = 0.;
+    /* var socket = io.connect('//ae7cf58d.ngrok.io');
       socket.on('data', function(data) {
         console.log(data[0]);
         tip = data[0];
         boat.rotation.z = (tip * 0.1) - .05;
         console.log(boat.rotation.z);
-        // if(data[0] ==="/tip" && data[1] !== null){
-        //   console.log(data);
-        //x = map(data[1], 0, 1, -400, 400);
       });
       socket.on('error', function() {
         console.error(arguments)
       });
-
+      */
   </script>
 
 
