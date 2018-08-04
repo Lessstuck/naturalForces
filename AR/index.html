@@ -22,39 +22,24 @@
     <a-light type="point" color="yellow" position="-4 4 0" intensity="2"></a-light>
     <a-light type="point" color="skyblue" position="2 1 0" intensity="4"></a-light>
     <a-light type="point" color="skyblue" position="0 4 0" intensity="2"></a-light>
-
   </a-scene>
 
-
-  <!-- other models -->
-  <!-- scale=".25 .25 .25" -->
-  <!-- gltf-model="src: url(./models/Dinghy_Wooden_Boat.mtl);" -->
-  <!-- animation-mixer="clip: *;"> -->
-  <!-- scale=".002 .002 .002" -->
-  <!-- rotation="0 90 0" -->
-  <!-- obj-model="obj: url(./models/Dinghy_Wooden_Boat_obj/Dinghy_Wooden_Boat.obj); -->
-      <!-- mtl: url(./models/Dinghy_Wooden_Boat_obj/Dinghy_Wooden_Boat.mtl)"> -->
   <script type="text/javascript">
-    let boat;
-//    function onSceneLoaded() {
-        boat = document.querySelector('#boat').object3D;
-
-  //      }
-    const scene = document.querySelector('a-scene');
-  //  scene.addEventListener('loaded', onSceneLoaded);
-    var tip = 0.;
-    /* var socket = io.connect('//ae7cf58d.ngrok.io');
-      socket.on('data', function(data) {
-        console.log(data[0]);
-        tip = data[0];
-        boat.rotation.z = (tip * 0.1) - .05;
-        console.log(boat.rotation.z);
-      });
-      socket.on('error', function() {
-        console.error(arguments)
-      });
-      */
+      const scene = document.querySelector('a-scene');
+//    scene.addEventListener('loaded', onSceneLoaded);
+      let boat;
+//      function onSceneLoaded() {
+      boat = document.querySelector('#boat').object3D;
+//      }
+      var socket = io('http://10.0.1.15');
+      AFRAME.registerComponent('send-newLoop', {
+        init: function () {
+          var el = this.el;
+          el.addEventListener('animation-loop', function () {
+            socket.emit('newLoop')
+          });
+        }
+      })
+      var tip = 0.;
   </script>
-
-
 </body>

@@ -21,20 +21,23 @@ app.get('/', function(req, res) {
 
 var oscServer = new osc.UDPPort({
   // localAddress: "192.168.1.2",
-  localAddress: "10.10.7.244",
+  localAddress: "10.0.1.15",
     localPort: 8000
 });
 oscServer.open();
-oscServer.on("message", function(msg) {
-    var mess = msg.args;
-    var messInt = 20 * mess;
-    client.publish("tip", String(messInt, 2));
-    // pass touchOSC messages to socket
-    io.sockets.emit('data', mess);
-    console.log("OSC Message: ", mess);
-    oscServer.send({
-        address: '/tipper',
-        args: mess
-    }, '127.0.0.1', 9000);
-
+io.on("connection", function(socket) {
+    socket.on("newLoop", function(data) {
+      console.log("newLoop: " + data);
+    })
 });
+    
+    // // OSC messages to mqtt to control motor
+    // client.publish("tip", String(messInt, 2));
+    // // OSC messages to socket to control webVR animations
+    // io.sockets.emit('data', mess);
+    // console.log("OSC Message: ", mess);
+    // // OSC messages to Mad Mapper
+    // oscServer.send({
+    //     address: '/tipper',
+    //     args: mess
+    // }, '127.0.0.1', 9000);
