@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "mosca": "^2.8.2",
+    "lodash": "^4.17.10",
+    "mosca": "^2.8.3",
     "mqtt": "^2.18.1",
     "node-osc": "^2.1.0",
     "osc": "^2.2.3",
