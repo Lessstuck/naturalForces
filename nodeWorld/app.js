@@ -10,9 +10,10 @@ client.on("connect", function() {
 });
 var osc = require('osc');
 app.use(express.static('./public'));
-app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/index.html');
-});
+// app.get('/', function(req, res) {
+//     //res.sendFile(__dirname + '/index.html');
+//     res.sendFile(__dirname + '/index.html');
+// });
 // pass mqtt messages to socket
 // client.on("message", function(topic, message) {
 //     io.sockets.emit("data", String(message));
@@ -30,7 +31,7 @@ io.on("connection", function(socket) {
       console.log("newLoop: " + data);
     })
 });
-    
+
     // // OSC messages to mqtt to control motor
     // client.publish("tip", String(messInt, 2));
     // // OSC messages to socket to control webVR animations
