@@ -10,10 +10,9 @@ client.on("connect", function() {
 });
 var osc = require('osc');
 app.use(express.static('./public'));
-// app.get('/', function(req, res) {
-//     //res.sendFile(__dirname + '/index.html');
-//     res.sendFile(__dirname + '/index.html');
-// });
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + '/ani-sync.html');
+});
 // pass mqtt messages to socket
 // client.on("message", function(topic, message) {
 //     io.sockets.emit("data", String(message));
