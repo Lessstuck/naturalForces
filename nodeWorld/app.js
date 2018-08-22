@@ -11,7 +11,7 @@ client.on("connect", function() {
 var osc = require('osc');
 app.use(express.static('./public'));
 app.get('/', function(req, res) {
-    res.sendFile(__dirname + '/ani-sync.html');
+    res.sendFile(__dirname + '/index.html');
 });
 // pass mqtt messages to socket
 // client.on("message", function(topic, message) {
