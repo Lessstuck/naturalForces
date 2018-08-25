@@ -9,7 +9,8 @@ client.on("connect", function() {
     client.publish("tip");
 });
 var osc = require('osc');
-app.use(express.static('./public'));
+//app.use(express.static('./public'));
+app.use("/public", express.static(__dirname + "/public"));
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
