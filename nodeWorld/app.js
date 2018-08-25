@@ -1,4 +1,4 @@
-    var express = require('express');
+var express = require('express');
 var app = express();
 const server = app.listen(3000);
 var path = require("path");
@@ -18,7 +18,6 @@ app.get('/', function(req, res) {
 //     io.sockets.emit("data", String(message));
 //     console.log(String(message));
 // });
-
 var oscServer = new osc.UDPPort({
   // localAddress: "192.168.1.2",
   localAddress: "10.0.1.15",
@@ -30,7 +29,6 @@ io.on("connection", function(socket) {
       console.log("newLoop: " + data);
     })
 });
-
     // // OSC messages to mqtt to control motor
     // client.publish("tip", String(messInt, 2));
     // // OSC messages to socket to control webVR animations
