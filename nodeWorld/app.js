@@ -27,7 +27,7 @@ var oscServer = new osc.UDPPort({
 oscServer.open();
 io.on("connection", function(socket) {
     socket.on("newLoop", function(data) {
-      console.log("newLoop: " + data);
+      console.log("newLoop");
     })
 });
     // // OSC messages to mqtt to control motor
