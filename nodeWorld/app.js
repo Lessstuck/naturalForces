@@ -30,19 +30,31 @@ var oscServer = new osc.UDPPort({
 });
 oscServer.open();
 io.on("connection", function(socket) {
+    var frame, frameIncrement;
+    var loopDirection = "down";
+    function looper(){
+        tip = frame/frames;
+        console.log(frame + "  " + tip);
+        frame = frame + frameIncrement;
+      };
+    // Each newLoop message triggers a scan, alternating up and down
     socket.on("newLoop", function(data) {
       console.log("newLoop");
-      var frame = 0;
-      var loop = setInterval(function(){
-          tip = frame/frames;
-          console.log(frame + "  " + tip);
-          frame++;
-          if (frame >= 240) {
-            clearInterval(loop);
-          };
-        }, period);
+      loop = setInterval(looper, period);
+      switch (loopDirection) {
+        case "up":
+          frame = 0;
+          frameIncrement = 1;
+          loopDirection = "down";
+          break;
+        case "down":
+          frame = 240;
+          frameIncrement = -1;
+          loopDirection = "up";
+          break;
+      }
       });
-    });
+  });
     // // OSC messages to mqtt to control motor
     // client.publish("tip", String(messInt, 2));
     // // OSC messages to socket to control webVR animations
