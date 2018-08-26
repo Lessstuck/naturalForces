@@ -33,12 +33,17 @@ io.on("connection", function(socket) {
     var frame, frameIncrement;
     var loopDirection = "down";
     var loopFirstLoop = 1;
+    // looper is updated each newLoop
     function looper(){
         tip = frame/frames;
         console.log(frame + "  " + tip);
+        oscServer.send({
+          address: '/tipper',
+          args: tip
+        }, '127.0.0.1', 9000);
         frame = frame + frameIncrement;
       };
-    // Each newLoop message triggers a scan, alternating up and down
+    // First loop starts setInterval, subsequent loops change direction
     socket.on("newLoop", function(data) {
       console.log("newLoop");
       if (loopFirstLoop == 1) {
@@ -64,8 +69,4 @@ io.on("connection", function(socket) {
     // // OSC messages to socket to control webVR animations
     // io.sockets.emit('data', mess);
     // console.log("OSC Message: ", mess);
-    // // OSC messages to Mad Mapper
-    // oscServer.send({
-    //     address: '/tipper',
-    //     args: mess
-    // }, '127.0.0.1', 9000);
+// OSC messages to Mad Mapper
