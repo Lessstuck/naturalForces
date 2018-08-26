@@ -32,6 +32,7 @@ oscServer.open();
 io.on("connection", function(socket) {
     var frame, frameIncrement;
     var loopDirection = "down";
+    var loopFirstLoop = 1;
     function looper(){
         tip = frame/frames;
         console.log(frame + "  " + tip);
@@ -40,7 +41,10 @@ io.on("connection", function(socket) {
     // Each newLoop message triggers a scan, alternating up and down
     socket.on("newLoop", function(data) {
       console.log("newLoop");
-      loop = setInterval(looper, period);
+      if (loopFirstLoop == 1) {
+            loop = setInterval(looper, period);
+            loopFirstLoop = 0;
+      };
       switch (loopDirection) {
         case "up":
           frame = 0;
@@ -52,7 +56,7 @@ io.on("connection", function(socket) {
           frameIncrement = -1;
           loopDirection = "up";
           break;
-      }
+      };
       });
   });
     // // OSC messages to mqtt to control motor
