@@ -1,3 +1,7 @@
+var tip = 0;
+var frames = 240;
+var framerate = 30;
+var period = 1000/framerate;
 var express = require('express');
 var app = express();
 const server = app.listen(3000);
@@ -28,8 +32,17 @@ oscServer.open();
 io.on("connection", function(socket) {
     socket.on("newLoop", function(data) {
       console.log("newLoop");
-    })
-});
+      var frame = 0;
+      var loop = setInterval(function(){
+          tip = frame/frames;
+          console.log(frame + "  " + tip);
+          frame++;
+          if (frame >= 240) {
+            clearInterval(loop);
+          };
+        }, period);
+      });
+    });
     // // OSC messages to mqtt to control motor
     // client.publish("tip", String(messInt, 2));
     // // OSC messages to socket to control webVR animations
