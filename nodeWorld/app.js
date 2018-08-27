@@ -24,7 +24,6 @@ app.get('/', function(req, res) {
 //     console.log(String(message));
 // });
 var oscServer = new osc.UDPPort({
-  // localAddress: "192.168.1.2",
   localAddress: "10.0.1.15",
     localPort: 8000
 });
