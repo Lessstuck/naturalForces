@@ -4,7 +4,7 @@ NETGEAR86
 royallotus498
 
 terminal:
-cd /Users/billy/Desktop/natural/nodeWorld
+cd /Users/billy/Documents/GitHub/naturalForces/nodeWorld
 mosca -v  | pino
 node app.js
 
