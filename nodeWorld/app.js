@@ -35,8 +35,8 @@ io.on("connection", function(socket) {
     // looper is updated each newLoop
     function looper(){
         tip = frame/frames;
-        mqqtip = tip * 20;
-        client.publish("tip", String(mqqtip));
+        mqttip = tip * 20;
+        client.publish("tip", String(mqttip));
         oscServer.send({
           address: '/tipper',
           args: tip
