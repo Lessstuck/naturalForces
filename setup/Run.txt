@@ -3,13 +3,17 @@ WiFi: 192.168.1.4
 NETGEAR86
 royallotus498
 
+TESTING: Megan's WiFi
+
+All files are located in GitHub/naturalForces/nodeWorld
+
 terminal:
 cd /Users/billy/Documents/GitHub/naturalForces/nodeWorld
 mosca -v  | pino
 node app.js
 
 arduino:
-sketch_jun25a_stepper.ino
+mqttStepper.ino
 
 mad mapper:
 bowl2.mad
