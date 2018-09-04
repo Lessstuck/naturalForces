@@ -4,14 +4,14 @@ var framerate = 30;
 var period = 1000/framerate;
 var express = require('express');
 var app = express();
-const server = app.listen(3000);
+const server = app.listen(3000, () => console.log('Listening on port 3000!'))
 var path = require("path");
 const io = require("socket.io")(server);
 var mqtt = require("mqtt");
 var client = mqtt.connect("mqtt://127.0.0.1");
-client.on("connect", function() {
-    client.publish("tip");
-});
+// client.on("connect", function() {
+//     client.publish("tip");
+// });
 var osc = require('osc');
 //app.use(express.static('./public'));
 app.use("/public", express.static(__dirname + "/public"));
@@ -35,7 +35,8 @@ io.on("connection", function(socket) {
     // looper is updated each newLoop
     function looper(){
         tip = frame/frames;
-        console.log(frame + "  " + tip);
+        mqqtip = tip * 20;
+        client.publish("tip", String(mqqtip));
         oscServer.send({
           address: '/tipper',
           args: tip

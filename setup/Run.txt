@@ -12,7 +12,7 @@ arduino:
 sketch_jun25a_stepper.ino
 
 mad mapper:
-bowl
+bowl2.mad
 
 iPhone:
 touchOSC
