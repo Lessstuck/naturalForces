@@ -26,7 +26,10 @@ io.on("connection", function(socket) {
     function looper(){
         tip = frame/frames;
         mqttip = tip * 20;
-        client.publish("tip", String(mqttip));
+        if (Number.isInteger(mqttip)) {
+            client.publish("tip", String(mqttip));
+            console.log(mqttip);
+        }
         oscServer.send({
           address: '/tipper',
           args: tip
