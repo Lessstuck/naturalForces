@@ -28,9 +28,9 @@
 
 // Update these with values suitable for your network.
 
-// const char* ssid = "NETGEAR86";
-// const char* password = "royallotus498";
-// const char* mqtt_server = "10.10.7.244";
+//const char* ssid = "NETGEAR86";
+//const char* password = "royallotus498";
+//const char* mqtt_server = "169.254.171.251";
 const char* ssid = "Megan's Wi-Fi Network";
 const char* password = "rh0da454";
 const char* mqtt_server = "10.0.1.15";

@@ -15,7 +15,7 @@ app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
 var oscServer = new osc.UDPPort({
-  localAddress: "10.0.1.15",
+    localAddress: "10.0.1.15",
     localPort: 8000
 });
 oscServer.open();
