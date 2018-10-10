@@ -60,7 +60,6 @@ void setup() {
   setup_wifi();
   client.setServer(mqtt_server, 1883);
   client.setCallback(callback);
-
   stepper.setMaxSpeed(1000);
 }
 void setup_wifi() {
