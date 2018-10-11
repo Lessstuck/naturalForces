@@ -46,6 +46,10 @@ io.on("connection", function(socket) {
       console.log("newLoop");
       loop = looper();
       rampLoop = rampLooper();
+       if (loopFirstLoop) {
+             loop = setInterval(looper, period);
+             loopFirstLoop = 0;
+       };
       switch (loopDirection) {
         case "up":
           frame = 0;
