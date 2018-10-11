@@ -129,7 +129,7 @@ void loop() {
   client.loop();
  
   stepper.moveTo(tipper);
-  stepper.setSpeed(100);
+  stepper.setSpeed(3);
   stepper.runSpeedToPosition();
   // stepper.runToNewPosition(0);
   // stepper.runToNewPosition(20);
@@ -144,4 +144,5 @@ void loop() {
     client.publish("outTopic", msg);
   }
   */
+  delay(33);
 }

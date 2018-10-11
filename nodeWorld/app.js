@@ -39,12 +39,11 @@ io.on("connection", function(socket) {
         frame = frame + frameIncrement;
     };
     function rampLooper() {
-      if (rampFrame > (frames/2)) {
-         rampFrame = 0
+      if (loopDirection == "down") {
+         mqttip = 0;
        } else {
-         rampFrame = 240
+         mqttip = 20;
        };
-      mqttip = rampFrame;
       client.publish("tip", String(mqttip));
       console.log(frame);
     };
@@ -52,7 +51,7 @@ io.on("connection", function(socket) {
       console.log("newLoop");
       if (loopFirstLoop) {
             loop = setInterval(looper, period);
-            rampLoop = setInterval(rampLooper, rampPeriod)
+            rampLoop = setInterval(rampLooper, rampPeriod);
             loopFirstLoop = 0;
       };
       switch (loopDirection) {
