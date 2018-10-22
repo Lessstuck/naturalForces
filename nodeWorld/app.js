@@ -5,8 +5,14 @@ var period = 1000/framerate;
 var rampFrame = 0;
 var rampPeriod = 1000 * (frames/framerate);
 var express = require('express');
+var fs = require('fs');
+var https = require('https');
 var app = express();
-const server = app.listen(3000, () => console.log('Listening on port 3000!'))
+const server = https.createServer({
+  key: fs.readFileSync('server.key'),
+  cert: fs.readFileSync('server.cert')
+}, app)
+.listen(3000, () => console.log('Listening on port 3000!'))
 var path = require("path");
 const io = require("socket.io")(server);
 var mqtt = require("mqtt");

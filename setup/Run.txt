@@ -6,6 +6,8 @@ royallotus498
 TESTING: Megan's WiFi
 
 All files are located in GitHub/naturalForces/nodeWorld
+Generate self-signed ssl certificate:
+openssl req -nodes -new -x509 -keyout server.key -out server.cert
 
 terminal:
 cd /Users/billy/Documents/GitHub/naturalForces/nodeWorld
@@ -19,4 +21,4 @@ mad mapper:
 bowl2.mad
 
 iPhone:
-touchOSC
+https://10.0.1.15:3000
