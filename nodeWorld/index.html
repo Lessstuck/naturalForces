@@ -16,15 +16,15 @@
 </head>
 <body class="a-body">
     <!-- <a-scene class="fullscreen" inspector="" keyboard-shortcuts="" screenshot="" vr-mode-ui="" arjs="debugUIEnabled: false;" > -->
-    <a-scene>
+    <a-scene arjs="debugUIEnabled: false;">
       <!-- <a-entity laser-controls="hand: left " daydream-controls="" gearvr-controls="" oculus-go-controls="" oculus-touch-controls="" vive-controls="" windows-motion-controls=""></a-entity>
       <a-entity laser-controls="hand: right " daydream-controls="" gearvr-controls="" oculus-go-controls="" oculus-touch-controls="" vive-controls="" windows-motion-controls=""></a-entity> -->
       <a-marker-camera preset='kanji'></a-marker-camera>
       <a-entity id="boat">
             <a-entity gltf-model="#boatfile"
                       position="0 2.6 0"
-                      scale=".002 .002 .002"
-                      rotation="0 0 0"
+                      scale=".004 .004 .004"
+                      rotation="0 180 0"
                       animation-mixer="loop: pingpong"
                       sound="src: public/sound/not3.m4a; on: animation-loop">
             </a-entity>
@@ -42,6 +42,7 @@
       let boat;
       boat = document.querySelector('#boat');
       var socket = io();
+      socket.emit("beginLoop");
       boat.addEventListener('animation-loop', function () {
         socket.emit("newLoop");
         // console.log("event");

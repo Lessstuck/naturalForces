@@ -28,9 +28,10 @@ var oscServer = new osc.UDPPort({
 });
 oscServer.open();
 io.on("connection", function(socket) {
-    var frame, frameIncrement;
+    var frame = 0;
+    var frameIncrement;
     var loopDirection = "down";
-    var loopFirstLoop = 1;
+    var loopFirstLoop;
     function looper(){
         tip = frame/frames;
         oscServer.send({
@@ -46,8 +47,11 @@ io.on("connection", function(socket) {
          mqttip = 20;
        };
       client.publish("tip", String(mqttip));
-      console.log(frame);
     };
+    socket.on("beginLoop", function(data) {
+      console.log("loopFirstLoop");
+      loopFirstLoop = 1;
+    });
     socket.on("newLoop", function(data) {
       console.log("newLoop");
       loop = looper();
