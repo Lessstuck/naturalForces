@@ -30,7 +30,6 @@
 
 const char* ssid = "NETGEAR86";
 const char* password = "royallotus498";
-
 //const char* ssid = "Megan's Wi-Fi Network";
 //const char* password = "rh0da454";
 const char* mqtt_server = "10.0.1.15";
@@ -95,6 +94,8 @@ void callback(char* topic, byte* payload, unsigned int length) {
   Serial.println();
   float tippy = charAccum.toFloat();
   tipper = (int) tippy;
+  // map 0-20 to something like -10 +10. Sorta
+  tipper -= 6;
   Serial.println(tipper);
 
  //Serial.print("tippy: ");
@@ -127,22 +128,13 @@ void loop() {
     reconnect();
   }
   client.loop();
- 
-  stepper.moveTo(tipper);
-  stepper.setSpeed(3);
-  stepper.runSpeedToPosition();
-  // stepper.runToNewPosition(0);
-  // stepper.runToNewPosition(20);
-  /*
-  long now = millis();
-  if (now - lastMsg > 2000) {
-    lastMsg = now;
-    ++value;
-    snprintf (msg, 75, "hello world #%ld", value);
-    Serial.print("Publish message: ");
-    Serial.println(msg);
-    client.publish("outTopic", msg);
-  }
-  */
+//moveTo() is relative to a zero position that is changed each time program is uploaded
+//therefore, set mechanics to 0 position before uploading
+stepper.moveTo(tipper);
+stepper.setSpeed(5);
+stepper.runSpeedToPosition();
+  // //stepper.runToNewPosition(0);
+  // //stepper.runToNewPosition(20);
+
   delay(33);
 }
