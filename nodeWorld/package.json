@@ -9,8 +9,10 @@
   "author": "Les Stuck",
   "license": "ISC",
   "dependencies": {
+    "bl": "^4.0.0",
     "express": "^4.16.3",
     "lodash": "^4.17.15",
+    "mongodb": "^3.3.3",
     "mosca": "^2.8.3",
     "mqtt": "^2.18.1",
     "node-osc": "^2.1.0",
