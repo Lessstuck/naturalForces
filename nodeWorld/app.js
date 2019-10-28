@@ -17,16 +17,19 @@ var path = require("path");
 const io = require("socket.io")(server);
 var mqtt = require("mqtt");
 var client = mqtt.connect("mqtt://127.0.0.1");
-var osc = require('osc');
+// disalbe
+//var osc = require('osc');
 app.use("/public", express.static(__dirname + "/public"));
 app.get('/', function(req, res) {
     res.sendFile(__dirname + '/index.html');
 });
-var oscServer = new osc.UDPPort({
-    localAddress: "10.0.1.15",
-    localPort: 8000
-});
-oscServer.open();
+// disable
+// var oscServer = new osc.UDPPort({
+//     localAddress: "10.0.1.15",
+//     localPort: 8000
+// });
+// disable
+// oscServer.open();
 io.on("connection", function(socket) {
     var frame = 0;
     var frameIncrement;
@@ -34,10 +37,11 @@ io.on("connection", function(socket) {
     var loopFirstLoop;
     function looper(){
         tip = frame/frames;
-        oscServer.send({
-          address: '/tipper',
-          args: tip
-          }, '127.0.0.1', 9000);
+// disable
+        // oscServer.send({
+        //   address: '/tipper',
+        //   args: tip
+        //   }, '127.0.0.1', 9000);
         frame = frame + frameIncrement;
     };
     function rampLooper() {
