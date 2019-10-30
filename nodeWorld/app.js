@@ -8,11 +8,18 @@ var express = require('express');
 var fs = require('fs');
 var https = require('https');
 var app = express();
+// we will pass our 'app' to 'https' server
 const server = https.createServer({
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('server.cert')
+    key: fs.readFileSync('./key.pem'),
+    cert: fs.readFileSync('./cert.pem'),
+    passphrase: 'Pa55w0rd'
 }, app)
-.listen(3000, () => console.log('Listening on port 3000!'))
+.listen(3000, () => console.log('listening on port 3000'));
+// const server = https.createServer({
+//   key: fs.readFileSync('server.key'),
+//   cert: fs.readFileSync('server.cert')
+// }, app)
+// .listen(3000, () => console.log('Listening on port 3000!'))
 var path = require("path");
 const io = require("socket.io")(server);
 var mqtt = require("mqtt");
