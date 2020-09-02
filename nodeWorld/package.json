@@ -9,7 +9,7 @@
   "author": "Les Stuck",
   "license": "ISC",
   "dependencies": {
-    "bl": "^4.0.0",
+    "bl": "^4.0.3",
     "express": "^4.17.1",
     "lodash": "^4.17.15",
     "mongodb": "^3.3.3",
